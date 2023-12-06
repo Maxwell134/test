@@ -4,8 +4,16 @@ FROM python:3.8-slim
 # Set the working directory inside the container
 WORKDIR /app
 
+RUN python3 -m venv venv
+
+# Activate the virtual environment
+ENV PATH=/app/venv/bin:$PATH
+
 # Copy the requirements file into the container at /app
 COPY requirements.txt .
+
+# Create a virtual environment
+
 
 # Install any dependencies specified in requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
