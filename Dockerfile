@@ -25,7 +25,7 @@ COPY . .
 EXPOSE 80
 
 # Set the environment variable to run Flask in production mode
-ENV FLASK_ENV=production
+# ENV FLASK_ENV=production
 
 # Command to run your application
 CMD ["python3", "main.py"]
