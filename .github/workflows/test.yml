@@ -1,7 +1,11 @@
 name: Branch-Based Docker Builder
 
 on:
- workflow_dispatch 
+
+  workflow_dispatch:
+  push:
+    branches: ['**']
+     
 jobs:
   build:
     runs-on: ubuntu-latest
